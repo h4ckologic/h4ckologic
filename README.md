@@ -26,25 +26,9 @@
 <!--                    TERMINAL: WHOAMI                        -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 
-```console
-┌─────────────────────────────────────────────────────────────────────────┐
-│  root@h4ckologic:~# cat /etc/profile                                    │
-├─────────────────────────────────────────────────────────────────────────┤
-│                                                                         │
-│   NAME       →  h4ckologic                                              │
-│   ROLE       →  Security Researcher & Vulnerability Hunter              │
-│   LOCATION   →  Abu Dhabi, UAE  🇦🇪                                     │
-│   DOMAINS    →  Mobile · Web · Fuzzing · CVE Research · Bug Bounty      │
-│                                                                         │
-│   CVEs       →  CVE-2021-31001 (iOS VoLTE)  ·  CVE-2019-17221          │
-│   PLATFORMS  →  HackerOne  ·  Bugcrowd  ·  Disclosed Online            │
-│   TALKS      →  Conference Speaker & Security Researcher                │
-│                                                                         │
-│   MOTTO      →  "Security is not a product, but a continuous process"  │
-│   STATUS     →  [ ██████████████████░░ ] Hunting...  🔍                 │
-│                                                                         │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+<div align="center">
+<img width="100%" src="https://raw.githubusercontent.com/h4ckologic/h4ckologic/main/terminal.svg" alt="h4ckologic terminal profile"/>
+</div>
 
 ---
 
