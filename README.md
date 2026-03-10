@@ -307,6 +307,89 @@ Collection of security conference presentation slides covering mobile security, 
 ---
 
 <!-- ═══════════════════════════════════════════════════════════ -->
+<!--                  CONFERENCE TALKS                          -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+## 🎤 Conference Talks & Research Presentations
+
+<br/>
+
+> Presented at **HITB**, **Black Hat MEA**, **RomHack**, **Hack.lu**, **Hacktivity**, **BSides**, **Ekoparty**, and more.
+
+<br/>
+
+<table>
+<tr>
+<th align="left">Year</th>
+<th align="left">Conference</th>
+<th align="left">Talk</th>
+<th align="center">Slides</th>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/2026-IDSS-%2300ff41?style=flat-square&labelColor=0d1117"/></td>
+<td>IDSS'26</td>
+<td>Deep Dive into Building Next-Gen Local AI Security Reviewers</td>
+<td align="center"><a href="https://github.com/h4ckologic/Talks/blob/main/IDSS'26%20Deep%20Dive%20into%20Building%20Next-Gen%20Local%20AI%20Security%20Reviewers.pdf">📄</a></td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/2025-Black%20Hat%20MEA-%2300ff41?style=flat-square&labelColor=0d1117"/></td>
+<td>Black Hat MEA 2025</td>
+<td>FalconEYE — Local LLM Powered Code Review</td>
+<td align="center"><a href="https://github.com/h4ckologic/Talks/blob/main/BHMEA25_FalconEye.pdf">📄</a></td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/2025-Hack.lu-%2300ff41?style=flat-square&labelColor=0d1117"/></td>
+<td>Hack.lu 2025</td>
+<td>Breaking into Android IPC Mechanisms through AIDL Fuzzing</td>
+<td align="center"><a href="https://github.com/h4ckologic/Talks/blob/main/Hack_Lu_Breaking%20into%20Android%20IPC%20Mechanisms%20through%20AIDL%20Fuzzing.pdf">📄</a></td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/2024-HITB%20BKK-%23f39c12?style=flat-square&labelColor=0d1117"/></td>
+<td>HITB Bangkok</td>
+<td>AI-Assisted Code Review</td>
+<td align="center"><a href="https://github.com/h4ckologic/Talks/blob/main/AI_ASSISTED_CODE_REVIEW_HITB.pdf">📄</a></td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/2024-BSides%20AMD-%23f39c12?style=flat-square&labelColor=0d1117"/></td>
+<td>BSides Ahmedabad 0x05</td>
+<td>Breaking into Android IPC Mechanisms through Advanced AIDL Fuzzing</td>
+<td align="center"><a href="https://github.com/h4ckologic/Talks/blob/main/Breaking%20into%20Android%20IPC%20Mechanisms%20through%20Advanced%20AIDL%20Fuzzing.pdf">📄</a></td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/2023-Multi--Con-%238b9da5?style=flat-square&labelColor=0d1117"/></td>
+<td>RomHack · HITB HKT · BSides AMD</td>
+<td>Hacking into iOS's VoLTE Implementation <em>(CVE-2021-31001)</em></td>
+<td align="center">
+  <a href="https://github.com/h4ckologic/Talks/blob/main/RomHack23%20-%20VoLTE%20presentation.pdf">📄</a>
+  <a href="https://github.com/h4ckologic/Talks/blob/main/HITB%20-%20VoLTE%20presentation.pdf">📄</a>
+  <a href="https://github.com/h4ckologic/Talks/blob/main/BsidesAhmedabad%20-%20VoLTE%20presentation.pdf">📄</a>
+</td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/2020-Multi--Con-%238b9da5?style=flat-square&labelColor=0d1117"/></td>
+<td>NoNameCon · Ekoparty · Hacktivity</td>
+<td>Demystifying the Server Side</td>
+<td align="center"><a href="https://github.com/h4ckologic/Talks/blob/main/Hacktivity%20-%20Demystifying%20the%20Server%20Side.pdf">📄</a></td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/2019-Null%20Dubai-%238b9da5?style=flat-square&labelColor=0d1117"/></td>
+<td>Null Dubai</td>
+<td>SSRF — Make the Cloud Rain</td>
+<td align="center"><a href="https://github.com/h4ckologic/Talks/blob/main/SSRF%20Make%20the%20Cloud%20Rain.pdf">📄</a></td>
+</tr>
+</table>
+
+<br/>
+
+[![View All Talks](https://img.shields.io/badge/📂%20View%20All%20Slides-h4ckologic%2FTalks-%2300ff41?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117)](https://github.com/h4ckologic/Talks)
+
+</div>
+
+---
+
+<!-- ═══════════════════════════════════════════════════════════ -->
 <!--                    GITHUB STATS                            -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 
