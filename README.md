@@ -4,13 +4,7 @@
 <!--                  ANIMATED WAVE HEADER                      -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,40:003300,100:00ff41&height=220&section=header&text=h4ckologic&fontSize=72&fontColor=00ff41&animation=fadeIn&fontAlignY=40&desc=Security%20Researcher%20%E2%80%A2%20CVE%20Hunter%20%E2%80%A2%20Abu%20Dhabi%2C%20UAE&descAlignY=62&descSize=18&descColor=8b9da5"/>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                   TYPING ANIMATION                         -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2800&pause=1200&color=00FF41&center=true&vCenter=true&multiline=false&repeat=true&width=700&height=45&lines=%24+whoami+%3A%3A+Security+Researcher+%7C+CVE+Hunter;%24+cat+specialties.txt+%3A%3A+Mobile+Security+%7C+Fuzzing+%7C+Bug+Bounty;%24+ls+achievements%2F+%3A%3A+CVE-2021-31001+%7C+CVE-2019-17221;%24+./hunt.sh+--target+anything+--mode+aggressive+%F0%9F%8E%AF;%24+echo+%22Breaking+things+to+make+them+safer%22+%F0%9F%9B%A1%EF%B8%8F" alt="Typing SVG" />
+<img width="100%" src="https://raw.githubusercontent.com/h4ckologic/h4ckologic/main/hero.svg" alt="h4ckologic — Security Researcher | CVE Hunter | Abu Dhabi"/>
 
 <br/>
 
@@ -481,6 +475,10 @@ security_researcher:
 
 ---
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:00ff41,60:003300,100:0d1117&height=120&section=footer&text=Keep%20Hunting%20%F0%9F%94%8D&fontSize=24&fontColor=00ff41&animation=fadeIn&fontAlignY=65"/>
+```console
+root@h4ckologic:~# echo "Security is not a product, but a continuous process." && logout
+Security is not a product, but a continuous process.
+Connection to h4ckologic closed.
+```
 
 </div>
