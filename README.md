@@ -225,42 +225,82 @@
 
 ## 🚀 Featured Security Research & Tools
 
-</div>
-
-<div align="center">
-
-<a href="https://github.com/h4ckologic/CVE-2019-17221">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=h4ckologic&repo=CVE-2019-17221&theme=chartreuse-dark&bg_color=0d1117&border_color=00ff41&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9" />
-</a>
-<a href="https://github.com/h4ckologic/AIDL_Fuzzer">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=h4ckologic&repo=AIDL_Fuzzer&theme=chartreuse-dark&bg_color=0d1117&border_color=00ff41&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9" />
-</a>
-
-</div>
-
 <br/>
 
-<div align="center">
+<table>
+<tr>
+<td width="50%" valign="top">
 
-<a href="https://github.com/h4ckologic/go-SCAN">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=h4ckologic&repo=go-SCAN&theme=chartreuse-dark&bg_color=0d1117&border_color=00ff41&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9" />
-</a>
-<a href="https://github.com/h4ckologic/mobiletools">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=h4ckologic&repo=mobiletools&theme=chartreuse-dark&bg_color=0d1117&border_color=00ff41&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9" />
-</a>
+### 🔴 [CVE-2019-17221](https://github.com/h4ckologic/CVE-2019-17221)
+![Lang](https://img.shields.io/badge/PoC-Python-%233776AB?style=flat-square&logo=python&logoColor=white)
+![Stars](https://img.shields.io/github/stars/h4ckologic/CVE-2019-17221?style=flat-square&color=00ff41)
+![Forks](https://img.shields.io/github/forks/h4ckologic/CVE-2019-17221?style=flat-square&color=8b9da5)
 
-</div>
+**PhantomJS Arbitrary File Read**
+Exploit & PoC for CVE-2019-17221 — arbitrary file read via crafted web content in PhantomJS headless browser.
 
-<br/>
+</td>
+<td width="50%" valign="top">
 
-<div align="center">
+### 🤖 [AIDL_Fuzzer](https://github.com/h4ckologic/AIDL_Fuzzer)
+![Lang](https://img.shields.io/badge/Tool-Python-%233776AB?style=flat-square&logo=python&logoColor=white)
+![Stars](https://img.shields.io/github/stars/h4ckologic/AIDL_Fuzzer?style=flat-square&color=00ff41)
+![Forks](https://img.shields.io/github/forks/h4ckologic/AIDL_Fuzzer?style=flat-square&color=8b9da5)
 
-<a href="https://github.com/h4ckologic/AndroidAIDLFuzzer">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=h4ckologic&repo=AndroidAIDLFuzzer&theme=chartreuse-dark&bg_color=0d1117&border_color=00ff41&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9" />
-</a>
-<a href="https://github.com/h4ckologic/Talks">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=h4ckologic&repo=Talks&theme=chartreuse-dark&bg_color=0d1117&border_color=00ff41&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9" />
-</a>
+**Android AIDL Interface Fuzzer**
+Custom Python fuzzer targeting Android AIDL IPC interfaces. Used in research leading to CVE-2021-31001.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🔭 [go-SCAN](https://github.com/h4ckologic/go-SCAN)
+![Lang](https://img.shields.io/badge/Tool-Shell-%23121011?style=flat-square&logo=gnu-bash&logoColor=white)
+![Stars](https://img.shields.io/github/stars/h4ckologic/go-SCAN?style=flat-square&color=00ff41)
+![Forks](https://img.shields.io/github/forks/h4ckologic/go-SCAN?style=flat-square&color=8b9da5)
+
+**Recon Automation Suite**
+Bash-orchestrated recon pipeline using Go-based tools (nuclei, subfinder, httpx). Fast attack surface mapping.
+
+</td>
+<td width="50%" valign="top">
+
+### 📱 [AndroidAIDLFuzzer](https://github.com/h4ckologic/AndroidAIDLFuzzer)
+![Lang](https://img.shields.io/badge/Tool-Kotlin-%230095D5?style=flat-square&logo=kotlin&logoColor=white)
+![Stars](https://img.shields.io/github/stars/h4ckologic/AndroidAIDLFuzzer?style=flat-square&color=00ff41)
+![Forks](https://img.shields.io/github/forks/h4ckologic/AndroidAIDLFuzzer?style=flat-square&color=8b9da5)
+
+**On-Device AIDL Interface Fuzzer**
+Kotlin-based on-device fuzzer for Android AIDL interfaces. Runtime IPC surface discovery & fuzzing.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🛡️ [mobiletools](https://github.com/h4ckologic/mobiletools)
+![Lang](https://img.shields.io/badge/Tool-Shell-%23121011?style=flat-square&logo=gnu-bash&logoColor=white)
+![Stars](https://img.shields.io/github/stars/h4ckologic/mobiletools?style=flat-square&color=00ff41)
+![Forks](https://img.shields.io/github/forks/h4ckologic/mobiletools?style=flat-square&color=8b9da5)
+
+**Mobile Security Assessment Toolkit**
+Collection of automation scripts for mobile security assessments — Android & iOS testing workflows.
+
+</td>
+<td width="50%" valign="top">
+
+### 🎤 [Talks](https://github.com/h4ckologic/Talks)
+![Type](https://img.shields.io/badge/Content-Slides-%2300ff41?style=flat-square&logo=slideshare&logoColor=white)
+![Stars](https://img.shields.io/github/stars/h4ckologic/Talks?style=flat-square&color=00ff41)
+![Forks](https://img.shields.io/github/forks/h4ckologic/Talks?style=flat-square&color=8b9da5)
+
+**Conference Research Slides**
+Collection of security conference presentation slides covering mobile security, CVE research, and fuzzing.
+
+</td>
+</tr>
+</table>
 
 </div>
 
@@ -276,8 +316,8 @@
 
 <br/>
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=h4ckologic&show_icons=true&theme=chartreuse-dark&bg_color=0d1117&border_color=00ff41&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9&include_all_commits=true&count_private=true&hide_border=false" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=h4ckologic&layout=compact&theme=chartreuse-dark&bg_color=0d1117&border_color=00ff41&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9&langs_count=8" />
+<img height="180em" src="https://github-readme-stats-salesp07.vercel.app/api?username=h4ckologic&show_icons=true&theme=chartreuse-dark&bg_color=0d1117&border_color=00ff41&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9&include_all_commits=true&count_private=true&hide_border=false" />
+<img height="180em" src="https://github-readme-stats-salesp07.vercel.app/api/top-langs/?username=h4ckologic&layout=compact&theme=chartreuse-dark&bg_color=0d1117&border_color=00ff41&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9&langs_count=8" />
 
 </div>
 
@@ -287,13 +327,6 @@
 
 </div>
 
-<br/>
-
-<div align="center">
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=h4ckologic&theme=matrix&no-frame=true&no-bg=true&margin-w=6&row=1&column=7)](https://github.com/h4ckologic)
-
-</div>
 
 ---
 
