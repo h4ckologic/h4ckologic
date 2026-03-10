@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="900" height="220">
+  <defs>
+
+    <!-- Neon bloom glow on main title -->
+    <filter id="glow" x="-15%" y="-40%" width="130%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4"  result="b2"/>
+      <feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Subtle glow for rain chars -->
+    <filter id="rglow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Clip to SVG bounds -->
+    <clipPath id="bounds"><rect width="900" height="220"/></clipPath>
+
+    <style>
+      /* ── Matrix rain columns ── */
+      @keyframes r1 { 0%{transform:translateY(-220px);opacity:0} 8%{opacity:.9} 85%{opacity:.5} 100%{transform:translateY(280px);opacity:0} }
+      @keyframes r2 { 0%{transform:translateY(-280px);opacity:0} 12%{opacity:.7} 80%{opacity:.3} 100%{transform:translateY(280px);opacity:0} }
+      @keyframes r3 { 0%{transform:translateY(-180px);opacity:0} 6%{opacity:1}  90%{opacity:.6} 100%{transform:translateY(280px);opacity:0} }
+
+      .rc { font-family:'Courier New',Courier,monospace; font-size:12px; clip-path:url(#bounds); filter:url(#rglow); }
+      .rb { fill:#00ff41; }
+      .rd { fill:#00aa22; }
+      .rdd{ fill:#004400; }
+
+      .c01{animation:r1 2.7s linear infinite 0.0s}  .c02{animation:r2 3.4s linear infinite 0.3s}
+      .c03{animation:r3 2.2s linear infinite 0.8s}  .c04{animation:r1 3.9s linear infinite 1.1s}
+      .c05{animation:r2 2.5s linear infinite 1.6s}  .c06{animation:r3 4.2s linear infinite 0.5s}
+      .c07{animation:r1 3.1s linear infinite 2.0s}  .c08{animation:r2 2.8s linear infinite 0.9s}
+      .c09{animation:r3 3.7s linear infinite 1.4s}  .c10{animation:r1 2.4s linear infinite 2.3s}
+      .c11{animation:r2 4.0s linear infinite 0.2s}  .c12{animation:r3 3.3s linear infinite 1.8s}
+      .c13{animation:r1 2.9s linear infinite 0.6s}  .c14{animation:r2 3.6s linear infinite 1.3s}
+
+      /* ── Scan line sweep ── */
+      @keyframes scan { 0%{transform:translateY(0px);opacity:.08} 50%{opacity:.12} 100%{transform:translateY(220px);opacity:0} }
+      .scanline { animation:scan 3.5s ease-in-out infinite; }
+
+      /* ── Main title ── */
+      .title { font-family:'Courier New',Courier,monospace; font-weight:bold; font-size:72px;
+                fill:#00ff41; filter:url(#glow); }
+
+      /* ── Glitch layers (RGB split) ── */
+      @keyframes glR {
+        0%,87%,100% { transform:translate(0,0); clip-path:none; opacity:0; }
+        88%  { transform:translate(-5px,0); clip-path:polygon(0 15%,100% 15%,100% 38%,0 38%); opacity:.75; fill:#ff0044; }
+        90%  { transform:translate(3px,0);  clip-path:polygon(0 55%,100% 55%,100% 75%,0 75%); opacity:.75; fill:#ff0044; }
+        92%  { transform:translate(0,0);    clip-path:none; opacity:0; }
+      }
+      @keyframes glC {
+        0%,87%,100% { transform:translate(0,0); clip-path:none; opacity:0; }
+        88%  { transform:translate(5px,0);  clip-path:polygon(0 40%,100% 40%,100% 58%,0 58%); opacity:.6; fill:#00ffff; }
+        91%  { transform:translate(-3px,0); clip-path:polygon(0 70%,100% 70%,100% 88%,0 88%); opacity:.6; fill:#00ffff; }
+        92%  { transform:translate(0,0);    clip-path:none; opacity:0; }
+      }
+      .glR { font-family:'Courier New',Courier,monospace; font-weight:bold; font-size:72px;
+             animation:glR 8s infinite; }
+      .glC { font-family:'Courier New',Courier,monospace; font-weight:bold; font-size:72px;
+             animation:glC 8s infinite 0.04s; }
+
+      /* ── Cursor blink ── */
+      @keyframes blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+      .cursor { font-family:'Courier New',Courier,monospace; font-weight:bold; font-size:72px;
+                fill:#00ff41; filter:url(#glow); animation:blink 1s step-end infinite; }
+
+      /* ── Subtitle ── */
+      .sub  { font-family:'Courier New',Courier,monospace; font-size:14px; fill:#8b9da5; }
+      .sub2 { font-family:'Courier New',Courier,monospace; font-size:11px; fill:#00ff41; opacity:.55; }
+
+      /* ── Corner brackets ── */
+      .brk { fill:none; stroke:#00ff41; stroke-width:2; opacity:.45; }
+
+      /* ── Pulse on border ── */
+      @keyframes pulse { 0%,100%{opacity:.2} 50%{opacity:.55} }
+      .border-glow { fill:none; stroke:#00ff41; stroke-width:1; animation:pulse 4s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- ░░ BACKGROUND ░░ -->
+  <rect width="900" height="220" fill="#0d1117"/>
+
+  <!-- ░░ MATRIX RAIN — LEFT ZONE (x: 0–200) ░░ -->
+  <text class="rc rb c01" x="18"  y="0" >0<tspan x="18" dy="14">1</tspan><tspan x="18" dy="14">A</tspan><tspan x="18" dy="14">F</tspan><tspan x="18" dy="14">7</tspan><tspan x="18" dy="14">3</tspan><tspan x="18" dy="14">E</tspan><tspan x="18" dy="14">0</tspan><tspan x="18" dy="14">B</tspan><tspan x="18" dy="14">2</tspan><tspan x="18" dy="14">9</tspan><tspan x="18" dy="14">D</tspan><tspan x="18" dy="14">4</tspan><tspan x="18" dy="14">C</tspan><tspan x="18" dy="14">1</tspan><tspan x="18" dy="14">8</tspan></text>
+  <text class="rc rd c02" x="38"  y="0" >F<tspan x="38" dy="14">E</tspan><tspan x="38" dy="14">3</tspan><tspan x="38" dy="14">B</tspan><tspan x="38" dy="14">0</tspan><tspan x="38" dy="14">9</tspan><tspan x="38" dy="14">7</tspan><tspan x="38" dy="14">2</tspan><tspan x="38" dy="14">A</tspan><tspan x="38" dy="14">D</tspan><tspan x="38" dy="14">5</tspan><tspan x="38" dy="14">1</tspan><tspan x="38" dy="14">C</tspan><tspan x="38" dy="14">6</tspan><tspan x="38" dy="14">F</tspan><tspan x="38" dy="14">4</tspan></text>
+  <text class="rc rdd c03" x="58" y="0" >7<tspan x="58" dy="14">C</tspan><tspan x="58" dy="14">2</tspan><tspan x="58" dy="14">9</tspan><tspan x="58" dy="14">B</tspan><tspan x="58" dy="14">4</tspan><tspan x="58" dy="14">E</tspan><tspan x="58" dy="14">0</tspan><tspan x="58" dy="14">F</tspan><tspan x="58" dy="14">3</tspan><tspan x="58" dy="14">A</tspan><tspan x="58" dy="14">8</tspan><tspan x="58" dy="14">5</tspan><tspan x="58" dy="14">1</tspan><tspan x="58" dy="14">D</tspan><tspan x="58" dy="14">6</tspan></text>
+  <text class="rc rb c04" x="80"  y="0" >A<tspan x="80" dy="14">3</tspan><tspan x="80" dy="14">F</tspan><tspan x="80" dy="14">0</tspan><tspan x="80" dy="14">7</tspan><tspan x="80" dy="14">C</tspan><tspan x="80" dy="14">2</tspan><tspan x="80" dy="14">E</tspan><tspan x="80" dy="14">9</tspan><tspan x="80" dy="14">B</tspan><tspan x="80" dy="14">4</tspan><tspan x="80" dy="14">1</tspan><tspan x="80" dy="14">D</tspan><tspan x="80" dy="14">6</tspan><tspan x="80" dy="14">8</tspan><tspan x="80" dy="14">5</tspan></text>
+  <text class="rc rd c05" x="100" y="0" >2<tspan x="100" dy="14">D</tspan><tspan x="100" dy="14">6</tspan><tspan x="100" dy="14">A</tspan><tspan x="100" dy="14">F</tspan><tspan x="100" dy="14">1</tspan><tspan x="100" dy="14">3</tspan><tspan x="100" dy="14">C</tspan><tspan x="100" dy="14">8</tspan><tspan x="100" dy="14">0</tspan><tspan x="100" dy="14">E</tspan><tspan x="100" dy="14">5</tspan><tspan x="100" dy="14">B</tspan><tspan x="100" dy="14">7</tspan><tspan x="100" dy="14">4</tspan><tspan x="100" dy="14">9</tspan></text>
+  <text class="rc rdd c06" x="120" y="0" >9<tspan x="120" dy="14">4</tspan><tspan x="120" dy="14">0</tspan><tspan x="120" dy="14">B</tspan><tspan x="120" dy="14">E</tspan><tspan x="120" dy="14">7</tspan><tspan x="120" dy="14">3</tspan><tspan x="120" dy="14">F</tspan><tspan x="120" dy="14">2</tspan><tspan x="120" dy="14">A</tspan><tspan x="120" dy="14">6</tspan><tspan x="120" dy="14">D</tspan><tspan x="120" dy="14">1</tspan><tspan x="120" dy="14">C</tspan><tspan x="120" dy="14">5</tspan><tspan x="120" dy="14">8</tspan></text>
+  <text class="rc rb c07" x="142" y="0" >E<tspan x="142" dy="14">7</tspan><tspan x="142" dy="14">1</tspan><tspan x="142" dy="14">C</tspan><tspan x="142" dy="14">4</tspan><tspan x="142" dy="14">9</tspan><tspan x="142" dy="14">A</tspan><tspan x="142" dy="14">5</tspan><tspan x="142" dy="14">0</tspan><tspan x="142" dy="14">3</tspan><tspan x="142" dy="14">F</tspan><tspan x="142" dy="14">8</tspan><tspan x="142" dy="14">B</tspan><tspan x="142" dy="14">2</tspan><tspan x="142" dy="14">D</tspan><tspan x="142" dy="14">6</tspan></text>
+  <text class="rc rdd c08" x="162" y="0" >B<tspan x="162" dy="14">0</tspan><tspan x="162" dy="14">8</tspan><tspan x="162" dy="14">5</tspan><tspan x="162" dy="14">D</tspan><tspan x="162" dy="14">2</tspan><tspan x="162" dy="14">6</tspan><tspan x="162" dy="14">A</tspan><tspan x="162" dy="14">F</tspan><tspan x="162" dy="14">1</tspan><tspan x="162" dy="14">9</tspan><tspan x="162" dy="14">4</tspan><tspan x="162" dy="14">C</tspan><tspan x="162" dy="14">7</tspan><tspan x="162" dy="14">3</tspan><tspan x="162" dy="14">E</tspan></text>
+  <text class="rc rd c09" x="182" y="0" >5<tspan x="182" dy="14">A</tspan><tspan x="182" dy="14">E</tspan><tspan x="182" dy="14">2</tspan><tspan x="182" dy="14">8</tspan><tspan x="182" dy="14">F</tspan><tspan x="182" dy="14">0</tspan><tspan x="182" dy="14">D</tspan><tspan x="182" dy="14">6</tspan><tspan x="182" dy="14">3</tspan><tspan x="182" dy="14">C</tspan><tspan x="182" dy="14">7</tspan><tspan x="182" dy="14">9</tspan><tspan x="182" dy="14">1</tspan><tspan x="182" dy="14">B</tspan><tspan x="182" dy="14">4</tspan></text>
+
+  <!-- ░░ MATRIX RAIN — RIGHT ZONE (x: 700–900) ░░ -->
+  <text class="rc rb c10" x="720" y="0" >3<tspan x="720" dy="14">F</tspan><tspan x="720" dy="14">9</tspan><tspan x="720" dy="14">A</tspan><tspan x="720" dy="14">2</tspan><tspan x="720" dy="14">C</tspan><tspan x="720" dy="14">6</tspan><tspan x="720" dy="14">E</tspan><tspan x="720" dy="14">0</tspan><tspan x="720" dy="14">B</tspan><tspan x="720" dy="14">4</tspan><tspan x="720" dy="14">7</tspan><tspan x="720" dy="14">1</tspan><tspan x="720" dy="14">D</tspan><tspan x="720" dy="14">5</tspan><tspan x="720" dy="14">8</tspan></text>
+  <text class="rc rd c11" x="740" y="0" >C<tspan x="740" dy="14">1</tspan><tspan x="740" dy="14">7</tspan><tspan x="740" dy="14">E</tspan><tspan x="740" dy="14">4</tspan><tspan x="740" dy="14">B</tspan><tspan x="740" dy="14">9</tspan><tspan x="740" dy="14">2</tspan><tspan x="740" dy="14">F</tspan><tspan x="740" dy="14">5</tspan><tspan x="740" dy="14">0</tspan><tspan x="740" dy="14">A</tspan><tspan x="740" dy="14">3</tspan><tspan x="740" dy="14">8</tspan><tspan x="740" dy="14">D</tspan><tspan x="740" dy="14">6</tspan></text>
+  <text class="rc rdd c12" x="762" y="0" >8<tspan x="762" dy="14">5</tspan><tspan x="762" dy="14">D</tspan><tspan x="762" dy="14">0</tspan><tspan x="762" dy="14">B</tspan><tspan x="762" dy="14">3</tspan><tspan x="762" dy="14">A</tspan><tspan x="762" dy="14">7</tspan><tspan x="762" dy="14">C</tspan><tspan x="762" dy="14">2</tspan><tspan x="762" dy="14">F</tspan><tspan x="762" dy="14">9</tspan><tspan x="762" dy="14">E</tspan><tspan x="762" dy="14">4</tspan><tspan x="762" dy="14">1</tspan><tspan x="762" dy="14">6</tspan></text>
+  <text class="rc rb c13" x="782" y="0" >6<tspan x="782" dy="14">C</tspan><tspan x="782" dy="14">3</tspan><tspan x="782" dy="14">8</tspan><tspan x="782" dy="14">F</tspan><tspan x="782" dy="14">0</tspan><tspan x="782" dy="14">5</tspan><tspan x="782" dy="14">D</tspan><tspan x="782" dy="14">A</tspan><tspan x="782" dy="14">2</tspan><tspan x="782" dy="14">7</tspan><tspan x="782" dy="14">E</tspan><tspan x="782" dy="14">B</tspan><tspan x="782" dy="14">4</tspan><tspan x="782" dy="14">1</tspan><tspan x="782" dy="14">9</tspan></text>
+  <text class="rc rd c14" x="802" y="0" >D<tspan x="802" dy="14">7</tspan><tspan x="802" dy="14">2</tspan><tspan x="802" dy="14">A</tspan><tspan x="802" dy="14">5</tspan><tspan x="802" dy="14">E</tspan><tspan x="802" dy="14">1</tspan><tspan x="802" dy="14">8</tspan><tspan x="802" dy="14">4</tspan><tspan x="802" dy="14">B</tspan><tspan x="802" dy="14">C</tspan><tspan x="802" dy="14">3</tspan><tspan x="802" dy="14">F</tspan><tspan x="802" dy="14">0</tspan><tspan x="802" dy="14">6</tspan><tspan x="802" dy="14">9</tspan></text>
+  <text class="rc rdd c01" x="822" y="0" >1<tspan x="822" dy="14">9</tspan><tspan x="822" dy="14">6</tspan><tspan x="822" dy="14">C</tspan><tspan x="822" dy="14">3</tspan><tspan x="822" dy="14">A</tspan><tspan x="822" dy="14">F</tspan><tspan x="822" dy="14">7</tspan><tspan x="822" dy="14">0</tspan><tspan x="822" dy="14">E</tspan><tspan x="822" dy="14">B</tspan><tspan x="822" dy="14">5</tspan><tspan x="822" dy="14">2</tspan><tspan x="822" dy="14">8</tspan><tspan x="822" dy="14">D</tspan><tspan x="822" dy="14">4</tspan></text>
+  <text class="rc rb c03" x="844" y="0" >4<tspan x="844" dy="14">B</tspan><tspan x="844" dy="14">E</tspan><tspan x="844" dy="14">1</tspan><tspan x="844" dy="14">7</tspan><tspan x="844" dy="14">D</tspan><tspan x="844" dy="14">3</tspan><tspan x="844" dy="14">9</tspan><tspan x="844" dy="14">6</tspan><tspan x="844" dy="14">C</tspan><tspan x="844" dy="14">0</tspan><tspan x="844" dy="14">A</tspan><tspan x="844" dy="14">5</tspan><tspan x="844" dy="14">2</tspan><tspan x="844" dy="14">F</tspan><tspan x="844" dy="14">8</tspan></text>
+  <text class="rc rd c06" x="866" y="0" >A<tspan x="866" dy="14">6</tspan><tspan x="866" dy="14">0</tspan><tspan x="866" dy="14">F</tspan><tspan x="866" dy="14">9</tspan><tspan x="866" dy="14">2</tspan><tspan x="866" dy="14">D</tspan><tspan x="866" dy="14">5</tspan><tspan x="866" dy="14">B</tspan><tspan x="866" dy="14">8</tspan><tspan x="866" dy="14">1</tspan><tspan x="866" dy="14">4</tspan><tspan x="866" dy="14">C</tspan><tspan x="866" dy="14">7</tspan><tspan x="866" dy="14">3</tspan><tspan x="866" dy="14">E</tspan></text>
+  <text class="rc rdd c09" x="886" y="0" >7<tspan x="886" dy="14">3</tspan><tspan x="886" dy="14">B</tspan><tspan x="886" dy="14">4</tspan><tspan x="886" dy="14">E</tspan><tspan x="886" dy="14">0</tspan><tspan x="886" dy="14">C</tspan><tspan x="886" dy="14">9</tspan><tspan x="886" dy="14">6</tspan><tspan x="886" dy="14">F</tspan><tspan x="886" dy="14">2</tspan><tspan x="886" dy="14">A</tspan><tspan x="886" dy="14">1</tspan><tspan x="886" dy="14">5</tspan><tspan x="886" dy="14">8</tspan><tspan x="886" dy="14">D</tspan></text>
+
+  <!-- ░░ GRADIENT VIGNETTE (center fade so rain doesn't clash with text) ░░ -->
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="55%">
+      <stop offset="0%"   stop-color="#0d1117" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="220" fill="url(#vignette)"/>
+
+  <!-- ░░ SCAN LINE ░░ -->
+  <rect class="scanline" x="0" y="0" width="900" height="3" fill="#00ff41"/>
+
+  <!-- ░░ GLITCH LAYER RED ░░ -->
+  <text class="glR" x="450" y="148" text-anchor="middle">h4ckologic</text>
+
+  <!-- ░░ GLITCH LAYER CYAN ░░ -->
+  <text class="glC" x="450" y="148" text-anchor="middle">h4ckologic</text>
+
+  <!-- ░░ MAIN TITLE ░░ -->
+  <text class="title" x="450" y="148" text-anchor="middle">h4ckologic</text>
+
+  <!-- ░░ CURSOR ░░ -->
+  <text class="cursor" x="786" y="148" text-anchor="start">▌</text>
+
+  <!-- ░░ SUBTITLE ░░ -->
+  <text class="sub" x="450" y="178" text-anchor="middle">[ Security Researcher  ·  CVE Hunter  ·  Abu Dhabi, UAE ]</text>
+  <text class="sub2" x="450" y="198" text-anchor="middle">Mobile Security  ·  Fuzzing  ·  Bug Bounty  ·  Reverse Engineering</text>
+
+  <!-- ░░ CORNER BRACKETS ░░ -->
+  <!-- Top-left -->
+  <polyline class="brk" points="12,8 4,8 4,28"/>
+  <polyline class="brk" points="4,8 24,8"/>
+  <!-- Top-right -->
+  <polyline class="brk" points="888,8 896,8 896,28"/>
+  <polyline class="brk" points="876,8 896,8"/>
+  <!-- Bottom-left -->
+  <polyline class="brk" points="12,212 4,212 4,192"/>
+  <polyline class="brk" points="4,212 24,212"/>
+  <!-- Bottom-right -->
+  <polyline class="brk" points="888,212 896,212 896,192"/>
+  <polyline class="brk" points="876,212 896,212"/>
+
+  <!-- ░░ PULSING BORDER ░░ -->
+  <rect class="border-glow" x="2" y="2" width="896" height="216" rx="4"/>
+
+  <!-- ░░ CORNER LABELS ░░ -->
+  <text class="label" x="10" y="215">root@h4ckologic:~#</text>
+  <text class="label" x="890" y="215" text-anchor="end">CVE-2021-31001 · CVE-2019-17221</text>
+
+</svg>
