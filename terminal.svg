@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 308" width="860" height="308">
+  <defs>
+    <clipPath id="wc"><rect width="860" height="308" rx="10"/></clipPath>
+    <style>
+      @keyframes cb { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+      .cur { animation: cb 1.1s step-end infinite; }
+      /* Staggered fade-in for rows */
+      @keyframes fi { from{opacity:0} to{opacity:1} }
+      .r1{animation:fi .4s ease-out  .10s both} .r2{animation:fi .4s ease-out  .20s both}
+      .r3{animation:fi .4s ease-out  .30s both} .r4{animation:fi .4s ease-out  .40s both}
+      .r5{animation:fi .4s ease-out  .50s both} .r6{animation:fi .4s ease-out  .60s both}
+      .r7{animation:fi .4s ease-out  .70s both} .r8{animation:fi .4s ease-out  .80s both}
+      .r9{animation:fi .4s ease-out  .90s both} .rA{animation:fi .4s ease-out 1.00s both}
+    </style>
+  </defs>
+
+  <g clip-path="url(#wc)">
+
+    <!-- ░ Background ░ -->
+    <rect width="860" height="308" fill="#0d1117"/>
+
+    <!-- ░ Title bar ░ -->
+    <rect width="860" height="38" fill="#161b22"/>
+    <line x1="0" y1="38" x2="860" y2="38" stroke="#30363d" stroke-width="1"/>
+
+    <!-- Traffic lights -->
+    <circle cx="22" cy="19" r="6" fill="#ff5f57"/>
+    <circle cx="43" cy="19" r="6" fill="#febc2e"/>
+    <circle cx="64" cy="19" r="6" fill="#28c840"/>
+
+    <!-- Title -->
+    <text font-family="'SF Mono','Fira Code','Cascadia Code','Courier New',monospace"
+          font-size="12" fill="#8b949e" text-anchor="middle" x="430" y="24">
+      root@h4ckologic: ~ — zsh
+    </text>
+
+    <!-- ░ Prompt line ░ -->
+    <g class="r1">
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="13" fill="#3fb950" x="28" y="68">root@h4ckologic</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="13" fill="#8b949e" x="165" y="68">:~#</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="13" fill="#e6edf3" x="192" y="68">cat /etc/profile</text>
+    </g>
+
+    <!-- Thin rule after prompt -->
+    <line x1="28" y1="78" x2="832" y2="78" stroke="#21262d" stroke-width="1" stroke-dasharray="3,5"/>
+
+    <!-- ░ DATA ROWS ░
+         Keys:   text-anchor="end"  x=118  (right-aligned to fixed column)
+         Arrow:  x=126
+         Values: x=142
+    -->
+
+    <!-- Row: NAME -->
+    <g class="r2">
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#58a6ff" text-anchor="end" x="118" y="98">NAME</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#f78166" x="126" y="98">→</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#e6edf3" x="146" y="98">h4ckologic</text>
+    </g>
+
+    <!-- Row: ROLE -->
+    <g class="r3">
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#58a6ff" text-anchor="end" x="118" y="119">ROLE</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#f78166" x="126" y="119">→</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#e6edf3" x="146" y="119">Security Researcher &amp; Vulnerability Hunter</text>
+    </g>
+
+    <!-- Row: LOCATION -->
+    <g class="r4">
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#58a6ff" text-anchor="end" x="118" y="140">LOCATION</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#f78166" x="126" y="140">→</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#e6edf3" x="146" y="140">Abu Dhabi, UAE</text>
+      <text font-family="sans-serif" font-size="13" x="278" y="141">🇦🇪</text>
+    </g>
+
+    <!-- Row: DOMAINS -->
+    <g class="r5">
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#58a6ff" text-anchor="end" x="118" y="161">DOMAINS</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#f78166" x="126" y="161">→</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#e6edf3" x="146" y="161">Mobile  ·  Web  ·  Fuzzing  ·  CVE Research  ·  Bug Bounty</text>
+    </g>
+
+    <!-- Separator -->
+    <line x1="28" y1="171" x2="832" y2="171" stroke="#21262d" stroke-width="1"/>
+
+    <!-- Row: CVEs -->
+    <g class="r6">
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#58a6ff" text-anchor="end" x="118" y="189">CVEs</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#f78166" x="126" y="189">→</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#ffa657" x="146" y="189">CVE-2021-31001</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#8b949e" x="264" y="189">(iOS VoLTE)</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#30363d" x="352" y="189">·</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#ffa657" x="362" y="189">CVE-2019-17221</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#8b949e" x="480" y="189">(PhantomJS)</text>
+    </g>
+
+    <!-- Row: PLATFORMS -->
+    <g class="r7">
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#58a6ff" text-anchor="end" x="118" y="210">PLATFORMS</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#f78166" x="126" y="210">→</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#e6edf3" x="146" y="210">HackerOne  ·  Bugcrowd  ·  Disclosed Online</text>
+    </g>
+
+    <!-- Row: TALKS -->
+    <g class="r8">
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#58a6ff" text-anchor="end" x="118" y="231">TALKS</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#f78166" x="126" y="231">→</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#e6edf3" x="146" y="231">8 conferences  ·  HITB  ·  Black Hat MEA  ·  RomHack  ·  Hack.lu</text>
+    </g>
+
+    <!-- Separator -->
+    <line x1="28" y1="241" x2="832" y2="241" stroke="#21262d" stroke-width="1"/>
+
+    <!-- Row: STATUS with visual progress bar -->
+    <g class="r9">
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#58a6ff" text-anchor="end" x="118" y="261">STATUS</text>
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#f78166" x="126" y="261">→</text>
+      <!-- [ -->
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#8b949e" x="146" y="261">[</text>
+      <!-- Filled bar segments: 18 × (8px wide + 2px gap) = 18×10=180 -->
+      <rect x="158" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="168" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="178" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="188" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="198" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="208" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="218" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="228" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="238" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="248" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="258" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="268" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="278" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="288" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="298" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="308" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="318" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <rect x="328" y="252" width="8" height="9" rx="1.5" fill="#3fb950"/>
+      <!-- Empty segments: 4 -->
+      <rect x="338" y="252" width="8" height="9" rx="1.5" fill="#21262d" stroke="#30363d" stroke-width="0.5"/>
+      <rect x="348" y="252" width="8" height="9" rx="1.5" fill="#21262d" stroke="#30363d" stroke-width="0.5"/>
+      <rect x="358" y="252" width="8" height="9" rx="1.5" fill="#21262d" stroke="#30363d" stroke-width="0.5"/>
+      <rect x="368" y="252" width="8" height="9" rx="1.5" fill="#21262d" stroke="#30363d" stroke-width="0.5"/>
+      <!-- ] hunting... -->
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="12" fill="#8b949e" x="380" y="261">]  hunting...</text>
+      <!-- Blinking cursor -->
+      <rect class="cur" x="464" y="251" width="8" height="11" rx="1" fill="#3fb950" opacity=".8"/>
+    </g>
+
+    <!-- Motto footer -->
+    <g class="rA">
+      <text font-family="'SF Mono','Fira Code','Courier New',monospace"
+            font-size="10.5" fill="#484f58" font-style="italic"
+            text-anchor="middle" x="430" y="291">
+        "Security is not a product, but a continuous process"
+      </text>
+    </g>
+
+  </g>
+
+  <!-- Outer border -->
+  <rect width="860" height="308" rx="10" fill="none" stroke="#30363d" stroke-width="1"/>
+</svg>
